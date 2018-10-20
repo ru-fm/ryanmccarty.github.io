@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>McWebsite</title>
+        
+        <style>
+            body {
+                background: rgb(255,254,225);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(207,182,153);
+                margin: 0 auto;
+                margin-bottom: 20px;
+                display: flex;
+                padding: 10px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(0, 0, 0);
+                flex: 1;
+                font-size: 2em;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(253,197,201);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 400px;
+                border: #000 double 20px;
+                border-radius: 2px 50px 50px 2px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            .content header {
+                font-size: 2.5em;
+                margin-left: -20px;
+            }
+            .interests header {
+                font-size: 1.5em;
+                margin-top: 50px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <div id="all-contents">
+            <nav>
+                <header>Ryan's Rockin' Rwebsite</header>
+                <ul>
+                    <li><a href="index.html"</a>Home</li>
+                    <li><a href="portfolio.html"></a>Portfolio</li>
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="sidebar">
+                    <img src="https://i.pinimg.com/564x/9a/5e/e8/9a5ee8f4803cf75e6f4d294e514cf2da.jpg">
+                </div>
+                
+                <div class="content">
+                    <header>Ryan McCarty</header>
+                    <p>Student at Operation Spark!</p>
+                    
+                    <section class="interests">
+                        <header>Interests</header>
+                        <ul>
+                            <li>Cards</li>
+                            <li>Coffee</li>
+                            <li>Corvids</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
