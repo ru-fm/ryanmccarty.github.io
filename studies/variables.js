@@ -40,7 +40,21 @@ variable declaration scopes
 var - global, local. reassignable.
 
 let - block. reassignable.
-const - block. unreassignable, must be initialized when it is declared. 
+const - block. unreassignable, must be initialized when it is declared. attempting to assign a new
+value to an existing constant returns an error.
+*/
+
+// SCOPE //
+/*code like boxes nested within boxes
+
+Global (global scope)
+   Function (local scope)
+      If (block scope)
+      Else (block scope)
+   Loop (block scope)
+   
+scope determines what code you have access to.
+child scopes can use code from their parent scopes, but not vice versa. 
 */
 
 // HOISTING //

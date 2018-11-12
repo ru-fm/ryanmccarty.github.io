@@ -2,10 +2,23 @@
 DATATYPES:
 0. Dataypes come in two flavors: simple/primitive and complex. 
 
-1. simple values: fit within the 1 byte of memory allocated to a variable when it is
-created. as such they are copied by VALUE. when assigned or passed the data itself is
-copied and, if changed, returns a NEW simple dataype. 
-*/
+1. simple: fit within the 1 byte of memory allocated to a variable when it is
+created. as such they are copied by VALUE. when assigned or passed the data ITSELF is
+copied and, if changed, returns a new simple dataype.*/
+var cat = 'navi';
+var anotherCat = cat;//anotherCat now contains its own copy of the string 'navi'
+var AnotherCat = 'heihu';
+console.log(cat);//still prints navi, only the copied value store in anotherCat changed.
+
+/*2 complex: store REFERENCES to values, and are copied as such. when we assign a new 
+variable to an existing complex dataype both the new and original variable point to the 
+same object; the new variable is not a copy and actions performed on it change the original.*/
+var cat = {name: 'navi'};
+var anotherCat = cat;
+anotherCat.name = 'heihu';
+console.log(cat.name);//returns heihu.
+
+
 
 // SIMPLE/PRIMITIVE DATATYPES //
 //Number: numbers!
@@ -24,7 +37,7 @@ console.log(navi); //prints undefined. compare to:
 console.log(cat); //results in 'ReferenceError cat is undefined'
 
 //null: valueless but intentionally so. null must be assigned and indicates
-//that something is purposefully empty. falsey, but different from 0, undefined, etc.
+//that something is purposefully empty. falsey. do not mix up 0, undefined, etc.
 
 //NaN: 'Not-A-Number'. a value that results typically from operations on numbers
 //that are illegal or illogical. 
@@ -64,11 +77,8 @@ console.log(whosACuteKitty('heihu'));//prints heihu is a cute kitty
 
 /*Infinity and -Infinity: not real numbers. rather they are used in describing and measuring
 the limiting behaviors of other numbers and equations. they are equal to numbers that exceed 
-the upper or lower limit of floating point numbers as defined by the IEEE standard.*/
+the upper or lower limit of floating point (or representable) numbers as defined by the IEEE 
+standard. any armithmetic involving infinity yields infinity.*/
 
 console.log(1.797693134862315E+308 * 2);//prints infinity
 
-/*
-What is the difference between primitive/simple and complex data types?
-Primitive values are passed to a function BY COPY, complex values are BY REFERENCE. What does that mean, and how are they different?
-*/
